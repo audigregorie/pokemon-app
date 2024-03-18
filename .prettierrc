@@ -1,0 +1,21 @@
+{
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "printWidth": 80,
+  "semi": false,
+  "singleAttributePerLine": true,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "useTabs": false,
+  "proseWrap": "always",
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "options": {
+        "tabWidth": 2,
+        "printWidth": 80
+      }
+    }
+  ]
+}
