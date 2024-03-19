@@ -8,11 +8,10 @@ import { InMemoryDataService } from './in-memory-data.service'
 import { PokemonModule } from './pokemon/pokemon.module'
 
 import { AppComponent } from './app.component'
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LoginComponent } from './login/login.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent, LoginComponent],
+  declarations: [AppComponent, PageNotFoundComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -24,4 +23,4 @@ import { LoginComponent } from './login/login.component'
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

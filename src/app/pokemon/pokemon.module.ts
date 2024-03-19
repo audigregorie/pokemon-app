@@ -1,18 +1,20 @@
 import { NgModule, inject } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterModule, Routes } from '@angular/router'
+import { FormsModule } from '@angular/forms'
 
 import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.component'
 import { ListPokemonComponent } from './list-pokemon/list-pokemon.component'
-import { BorderCardDirective } from './border-card.directive'
-import { PokemonTypeColorPipe } from './pokemon-type-color.pipe'
-import { PokemonService } from './pokemon.service'
-import { FormsModule } from '@angular/forms'
 import { PokemonFormComponent } from './pokemon-form/pokemon-form.component'
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component'
 import { AddPokemonComponent } from './add-pokemon/add-pokemon.component'
 import { SearchPokemonComponent } from './search-pokemon/search-pokemon.component'
 import { LoaderComponent } from './loader/loader.component'
+import { LoginComponent } from '../login/login.component'
+
+import { BorderCardDirective } from './border-card.directive'
+import { PokemonTypeColorPipe } from './pokemon-type-color.pipe'
+import { PokemonService } from './pokemon.service'
 import { authGuard } from '../auth.guard'
 
 const pokemonRoutes: Routes = [
@@ -37,6 +39,7 @@ const pokemonRoutes: Routes = [
     AddPokemonComponent,
     SearchPokemonComponent,
     LoaderComponent,
+    LoginComponent,
   ],
   imports: [CommonModule, FormsModule, RouterModule.forChild(pokemonRoutes)],
   providers: [PokemonService],
