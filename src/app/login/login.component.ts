@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { AuthService } from '../auth.service'
 import { Router } from '@angular/router'
 
@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private router: Router,
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.auth = this.authService

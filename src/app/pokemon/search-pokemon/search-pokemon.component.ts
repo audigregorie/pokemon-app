@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core'
-import { Observable, Subject, debounceTime, distinctUntilChanged, switchMap } from 'rxjs'
+import {
+  Observable,
+  Subject,
+  debounceTime,
+  distinctUntilChanged,
+  switchMap,
+} from 'rxjs'
 import { Pokemon } from '../pokemon'
 import { Router } from '@angular/router'
 import { PokemonService } from '../pokemon.service'
@@ -16,7 +22,7 @@ export class SearchPokemonComponent implements OnInit {
   constructor(
     private router: Router,
     private pokemonService: PokemonService,
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.pokemons$ = this.searchTerms.pipe(

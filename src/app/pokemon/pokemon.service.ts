@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 
 @Injectable()
 export class PokemonService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   private log(response: Pokemon[] | Pokemon | undefined) {
     console.table(response)
@@ -53,7 +53,7 @@ export class PokemonService {
     )
   }
 
-  public deletePokemon(pokemonId: number): Observable<Pokemon | null> {
+  public deletePokemon(pokemonId: number): Observable<Pokemon> {
     return this.http.delete<Pokemon>(`api/pokemons/${pokemonId}`).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, null)),
