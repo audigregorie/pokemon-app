@@ -8,7 +8,8 @@ import { Router } from '@angular/router'
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  message: string = 'Vous etes déconnecté. (pikachu/pikachu)'
+  message: string =
+    "Vous etes déconnecté.\n(nom d'utilisateur: Pikachu / mot de passe: Pikachu)"
   name: string
   password: string
   auth: AuthService
@@ -32,15 +33,17 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.message = 'Tentation de connexion en cours'
-    this.auth.login(this.name, this.password).subscribe((isLoggedIn: boolean) => {
-      this.setMessage()
-      if (isLoggedIn) {
-        this.router.navigate(['/pokemons'])
-      } else {
-        this.password = ''
-        this.router.navigate(['/login'])
-      }
-    })
+    this.auth
+      .login(this.name, this.password)
+      .subscribe((isLoggedIn: boolean) => {
+        this.setMessage()
+        if (isLoggedIn) {
+          this.router.navigate(['/pokemons'])
+        } else {
+          this.password = ''
+          this.router.navigate(['/login'])
+        }
+      })
   }
 
   logout() {

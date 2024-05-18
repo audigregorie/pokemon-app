@@ -1,4 +1,4 @@
-import { NgModule, inject } from '@angular/core'
+import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterModule, Routes } from '@angular/router'
 import { FormsModule } from '@angular/forms'
@@ -26,7 +26,8 @@ const pokemonRoutes: Routes = [
   {
     path: 'pokemon/add',
     component: AddPokemonComponent,
-    canActivate: [() => inject(authGuard).canActivate()],
+    // canActivate: [() => inject(authGuard).canActivate()],
+    canActivate: [authGuard],
   },
   {
     path: 'pokemons',

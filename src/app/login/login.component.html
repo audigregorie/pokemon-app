@@ -1,19 +1,19 @@
 <div class="row">
-  <div class="col s12 m4 offset-m4">
+  <div class="mt col s12 m4 offset-m4">
     <div class="card hoverable">
       <div class="card-content center">
-        <span class="card-title">Page de connexion</span>
+        <span class="card-title">Login</span>
         <p>
           <em>{{ message }}</em>
         </p>
       </div>
-      <form #loginForm="ngForm">
-        <div>
-          <label for="name">Name</label>
+      <form (keyup.enter)="login()" #loginForm="ngForm">
+        <div class="input-control">
+          <label for="name">Nom d'utilisateur</label>
           <input type="text" id="name" [(ngModel)]="name" name="name" required />
         </div>
-        <div>
-          <label for="password">Password</label>
+        <div class="input-control">
+          <label for="password">Mot de passe</label>
           <input type="password" id="password" [(ngModel)]="password" name="password" required />
         </div>
       </form>

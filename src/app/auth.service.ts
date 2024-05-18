@@ -8,10 +8,10 @@ export class AuthService {
   isLoggedIn: boolean = false
   redirectUrl: string
 
-  constructor() { }
+  constructor() {}
 
   login(name: string, password: string) {
-    const isLoggedIn = name === 'pikachu' && password === 'pikachu'
+    const isLoggedIn = name === 'Pikachu' && password === 'Pikachu'
 
     return of(isLoggedIn).pipe(
       delay(1000),
